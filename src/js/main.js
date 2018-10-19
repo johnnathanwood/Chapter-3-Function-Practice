@@ -115,27 +115,52 @@ uncookedFood.forEach((food) =>{
 console.log("We have the meat!:",cookedFood)
 
 // Create an array that contains the words in the sentence
-let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+// let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+// /*
+//     The addExcitement function should be an impure function, and accept
+//     the array as the sole argument. It should iterate over the array
+//     and output the words to the browser console.
+// */
+// function addExcitement (theWordArray) {
+
+//     // Each time the for loop executes, you're going to add one more word to this string
+//     let buildMeUp = ""
+
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         theWordArray.forEach((taco) => {
+//             buildMeUp += `${taco}
+//             `
+//             console.log("Oh wow look at this:",sentence)
+//         })
+
+//         // Concatenate the new word onto buildMeUp
+
+//         // Print buildMeUp to the console
+//     }
+
+// }
+
+// // Invoke the function and pass in the array
+// addExcitement(sentence)
+
+
+// Create an array that contains the words in the sentence
+let sentence1 = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
 /*
     The addExcitement function should be an impure function, and accept
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement (theWordArray) {
+addExcitement = (theWordArray, punctuation) => {
+    for (var index = 0; index <= theWordArray.length; index++) {
+        if (index % 3 === 0 && index !== 0){
+       theWordArray[index -1] += punctuation.repeat(index/3);
 
-    // Each time the for loop executes, you're going to add one more word to this string
-    let buildMeUp = ""
-
-    for (let i = 0; i < theWordArray.length; i++) {
-        // Concatenate the new word onto buildMeUp
-
-        // Print buildMeUp to the console
+        }
+        console.log(theWordArray.slice(0, index).join(" "));
     }
-
 }
-
-// Invoke the function and pass in the array
-addExcitement(sentence)
+addExcitement(sentence1, "?");
 
 
